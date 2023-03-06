@@ -440,10 +440,10 @@ fn main() {
 
     // Bob's prekey signature `Sig(IK_b, Encode(SPK_B))`
     let nonce = [0_u8; 64];
-    //let bob_spk_signature = bob_ik_secret.xeddsa_sign(&bob_public_spk.to_bytes(), &nonce);
+    let bob_spk_signature = bob_ik_secret.xeddsa_sign(&bob_public_spk.to_bytes(), &nonce);
    
     //FIXME: what's the corrrect key? bob_spk_secret.xddsa or bob_ik_secret.xddsa ?
-    let bob_spk_signature = bob_spk_secret.xeddsa_sign(&bob_public_spk.to_bytes(), &nonce);
+    //let bob_spk_signature = bob_spk_secret.xeddsa_sign(&bob_public_spk.to_bytes(), &nonce);
 
     // A set of Bob's one-time prekeys `(OPK_B1, OPK_B2, OPK_B3, ...)`
     let mut bob_opk_secrets =
